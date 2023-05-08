@@ -7,25 +7,14 @@ export class App extends Component {
     bad: 0,
   };
 
-  addFeedbackGood = () => {
-    this.setState(prevState => ({
-      good: prevState.good + 1,
-    }))
-    
-  }
-  addFeedbackBad = () => {
-    this.setState(prevState => ({
-      bad: prevState.bad + 1,
-    }))
-    
-  }
 
-  addFeedbackNeutral = () => {
-    this.setState(prevState => ({
-      neutral: prevState.neutral + 1,
-    }))
-    
-  }
+
+  addFeedback = (event) => {
+    const stateName = event.currentTarget.name;
+    this.setState((prevState) => ({ [stateName]: prevState[stateName] + 1 
+    })
+    ) 
+}
 
   countTotalFeedback = ({ good, neutral, bad }) => good + neutral + bad;
   
@@ -41,9 +30,9 @@ export class App extends Component {
       <section>
         <h1>Please leave feedback</h1>
         <div>
-          <button type='button'onClick={this.addFeedbackGood}>Good</button>
-          <button type='button'onClick={this.addFeedbackNeutral}>Neutral</button>
-          <button type='button'onClick={this.addFeedbackBad}>Bad</button>
+          <button name = 'good' type='button'onClick={this.addFeedback}>Good</button>
+          <button name = 'neutral' type='button'onClick={this.addFeedback}>Neutral</button>
+          <button name = 'bad' type='button'onClick={this.addFeedback}>Bad</button>
         </div>
         <p>Statistics</p>
         <div>
