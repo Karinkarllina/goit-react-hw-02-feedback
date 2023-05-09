@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Statistics } from './Statistics';
 
 export class App extends Component {
   state = {
@@ -35,15 +36,14 @@ export class App extends Component {
           <button name = 'bad' type='button'onClick={this.addFeedback}>Bad</button>
         </div>
         <p>Statistics</p>
-        <div>
-          <p>Good: <span>{good}</span></p>
-          <p>Neutral: <span>{neutral}</span></p>
-          <p>Bad: <span>{bad}</span></p>
-          <p>Total: <span>{this.countTotalFeedback(this.state)}</span></p>
-          <p>Positive Feedback: <span>{this.countPositiveFeedbackPercentage(this.state)}%</span></p>
-        </div>
+        <Statistics
+          good={good}
+          neutral={neutral}
+          bad={bad}
+          total={this.countTotalFeedback(this.state)}
+          positivePercentage={this.countPositiveFeedbackPercentage(this.state)}
+        />
       </section>
     );
   }
 }
-
