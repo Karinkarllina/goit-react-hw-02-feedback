@@ -1,0 +1,29 @@
+.statisticsItem {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Oxygen';
+}
+
+
+.statisticsList {
+    width: 300px;
+    height: 250px;
+    border-radius: 4px;
+    box-shadow: -3px -3px 3px #a07ae1, 5px 5px 5px #babecc;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 0;
+    margin-top: 0;
+}
+
+.optionName {
+    margin: 0;
+}
+
+.statNumber {
+    font-weight: 700;
+}

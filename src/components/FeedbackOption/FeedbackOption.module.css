@@ -1,0 +1,35 @@
+.optionsList {
+    display: flex;
+    gap: 15px;
+    padding-left: 0;
+    padding-top: 20px;
+}
+
+.optionBtn {
+    width: 100px;
+    height: 40px;
+    background-color: rgb(159, 159, 215);
+    border: none;
+    border-radius: 4px;
+    color: aliceblue;
+    font-family: 'Oxygen';
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    box-shadow: 4px 4px 17px -3px rgba(0, 0, 0, 0.6);
+        -webkit-box-shadow: 4px 4px 17px -3px rgba(0, 0, 0, 0.6);
+        -moz-box-shadow: 4px 4px 17px -3px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    scale: 1;
+    transition: scale 350ms;
+}
+
+.optionBtn:hover,
+.optionBtn:focus {
+    color: blue;
+    scale: 1.04;
+    transition: scale 350ms;
+    box-shadow: 4px 4px 17px -3px rgba(0, 0, 0, 0.6);
+        -webkit-box-shadow: 4px 4px 17px -3px rgba(0, 0, 0, 0.6);
+        -moz-box-shadow: 4px 4px 17px -3px rgba(0, 0, 0, 0.6);
+}
